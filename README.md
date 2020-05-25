@@ -5,7 +5,7 @@ John works at a clothing store. He has a large pile of socks that he must pair b
 # Function explained:
 There are two counters used mainly, count and temp; After we apply the command Arrays.sort(), the values in array look something like [1,1,1,2,2,2,3]. Now temp keeps a count of how many times colors of a kind come together. 
 Since we need a total of how many pairs of socks are present, we do- count=count+(temp/2)
-
+```
 static int sockMerchant(int n, int[] arr) {
         int count=0;
         Arrays.sort(arr);
@@ -19,3 +19,4 @@ static int sockMerchant(int n, int[] arr) {
         }
         return count;
     }
+```
