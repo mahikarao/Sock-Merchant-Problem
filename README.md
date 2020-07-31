@@ -9,7 +9,7 @@ Since we need a total of how many pairs of socks are present, we do- count=count
 static int sockMerchant(int n, int[] arr) {
         int count=0;
         Arrays.sort(arr);
-        for(int i=0;i<n;i++){
+        for(int i=0;i<n-1;i++){
             int temp=1;
             while((i<n-1)&&(arr[i]==arr[i+1])){
                 temp=temp+1; 
@@ -19,4 +19,8 @@ static int sockMerchant(int n, int[] arr) {
         }
         return count;
     }
+    
+    
+    P.s.: Notice how the for loop is run for "n-1" times as we need to make n-1 comparisons. 
+    ALso, a condition in while loop (i<n-1) is given to avoid index out of bound exception.
 ```
